@@ -1,0 +1,1470 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeHer | Your Safety Matters</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff8fa;
+    color: #30252a;
+    line-height: 1.6;
+}
+
+        }
+
+        header {
+            background: #8e1b3a;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 55px 20px 35px;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            color: #68545b;
+            line-height: 1.6;
+        }
+
+        .sos-button {
+            margin-top: 20px;
+            width: 145px;
+            height: 145px;
+            border-radius: 50%;
+            border: 7px solid #f5b7c5;
+            background: #c9184a;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 5px 15px #d9a0ad;
+        }
+
+        .sos-button:hover {
+            background: #a4133c;
+        }
+
+        .notice {
+            font-size: 13px;
+            max-width: 450px;
+            margin: 18px auto;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 25px 8% 50px;
+        }
+
+        
+.card {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 18px;
+    border: 1px solid #f5dce4;
+    box-shadow: 0 8px 24px rgba(142, 27, 58, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(142, 27, 58, 0.14);
+}
+
+        .card h3 {
+            color: #8e1b3a;
+        }
+
+       
+.card p {
+    line-height: 1.6;
+}
+
+.card input,
+.card textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #e5c8d1;
+    border-radius: 9px;
+    background: #fffafb;
+    color: #30252a;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card input:focus,
+.card textarea:focus {
+    border-color: #8e1b3a;
+    box-shadow: 0 0 0 3px rgba(142, 27, 58, 0.10);
+}
+
+.card input::placeholder,
+.card textarea::placeholder {
+    color: #9b7b85;
+}
+
+.card button,
+.hero button:not(.sos-button) {
+    background: #8e1b3a;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.card button:hover,
+.hero button:not(.sos-button):hover {
+    background: #b32650;
+    transform: translateY(-2px);
+}
+
+.sos-button {
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.sos-button:hover {
+    background: #a4133c;
+    transform: scale(1.05);
+}
+
+
+        footer {
+            text-align: center;
+            background: #8e1b3a;
+            color: white;
+            padding: 18px;
+        }
+
+       
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 18px 5%;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 35px 16px 25px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .sos-button {
+        width: 125px;
+        height: 125px;
+        font-size: 25px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        padding: 20px 5% 35px;
+        gap: 16px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card button,
+    .hero button:not(.sos-button) {
+        max-width: 100%;
+    }
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: #1e1e2f;
+    color: #f5f5f5;
+}
+
+body.dark-mode .card {
+    background: #2d2d44;
+    color: #f5f5f5;
+    border-color: #44445c;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode li {
+    color: #f5f5f5;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background: #242438;
+    color: #ffffff;
+    border-color: #666680;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #c5c5d5;
+}
+#savedFeedbackList {
+    display: block !important;
+    visibility: visible !important;
+    color: #222 !important;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+#savedFeedbackList div {
+    display: block !important;
+    visibility: visible !important;
+    color: #222 !important;
+    background-color: #ffffff;
+}
+
+#savedFeedbackList p,
+#savedFeedbackList h3 {
+    display: block !important;
+    visibility: visible !important;
+    color: #222 !important;
+}
+/* Mobile Responsive Design */
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    header {
+        padding: 15px;
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    button {
+        max-width: 100%;
+        padding: 10px 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 15px;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>SafeHer ♡</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#features">Safety Tools</a>
+            <a href="#about">About</a>
+        </nav>
+        
+<button onclick="toggleDarkMode()">
+    🌙 Toggle Dark Mode
+</button>
+
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Your Safety Matters</h1>
+
+        <p>
+            A simple safety companion to help you prepare,
+            stay informed, and reach trusted people.
+        </p>
+
+        <button class="sos-button" onclick="showSOSMessage()">
+            SOS
+        </button>
+<button onclick="callEmergencyContact()">
+    📞 Call Emergency Contact
+</button>
+<button onclick="callHelpline()">
+    📞 Call Emergency Helpline (112)
+</button>
+        <p class="notice">
+            Demo only: this button does not call emergency
+            services or send your location.
+        </p>
+    </section>
+
+<section class="features"id="features"></section>
+       
+<div class="card">
+    <h3>📞 Emergency Contacts</h3>
+    <p>Add a trusted person you can contact in an emergency.</p>
+
+    <input
+        type="text"
+        id="contactName"
+        placeholder="Enter contact name"
+    >
+
+    <input
+        type="tel"
+        id="contactPhone"
+        placeholder="Enter phone number"
+    >
+
+    <button onclick="addContact()">Add Contact</button>
+<button onclick="shareLocationWithContact()">
+    📍 Share Location with Emergency Contact
+</button>
+    <ul id="contactList"></ul>
+
+    <button onclick="exportContacts()">
+        📥 Export Emergency Contacts
+    </button>
+</div>
+
+        
+<div class="card">
+    <h3>💬 Emergency Message</h3>
+    <p>Create a message to share with someone you trust.</p>
+
+    <button onclick="useEmergencyTemplate()">
+        Use Emergency Template
+    </button>
+
+    <textarea
+        id="emergencyMessage"
+        rows="4"
+        placeholder="Write your emergency message here..."
+    ></textarea>
+
+    <button onclick="copyEmergencyMessage()">
+        Copy Message
+    </button>
+
+    <button onclick="shareOnWhatsApp()">
+        💚 Share on WhatsApp
+    </button>
+
+    <button onclick="clearEmergencyMessage()">
+        Clear Message
+    </button>
+</div>
+<div class="card">
+    <h3>📍 Share My Location</h3>
+
+    <p>
+        Find your current location and share it
+        with someone you trust.
+    </p>
+
+    <button onclick="getCurrentLocation()">
+        📍 Get My Current Location
+    </button>
+
+    <p id="locationResult">
+        Your location will appear here.
+    </p>
+
+    <button onclick="shareLocationOnWhatsApp()">
+        💚 Share Location on WhatsApp
+    </button>
+</div>
+
+      <div class="card">
+    <h3>⏳ Emergency Countdown Alert</h3>
+<button onclick="speakEmergencyMessage()">
+    🔊 Speak Emergency Message
+</button>
+<button onclick="startVoiceCommand()">
+    🎤 Start Voice Command
+</button>
+
+<p id="voiceCommandResult">
+    Click the button and speak a command.
+</p>
+    <p>
+        Start a 10-second countdown to prepare
+        an emergency message for your trusted contact.
+    </p>
+
+    <h2 id="countdownDisplay">10</h2>
+
+    <button onclick="startEmergencyCountdown()">
+        Start Emergency Countdown
+    </button>
+
+    <button onclick="cancelEmergencyCountdown()">
+        Cancel Countdown
+    </button>
+
+    <p id="countdownMessage">
+
+        Countdown has not started.
+    </p>
+    <button
+    id="openCountdownWhatsApp"
+    onclick="openCountdownWhatsApp()"
+    style="display: none;"
+>
+    💚 Open WhatsApp
+</button>
+</div> 
+
+<div class="card">
+    <h3>🛡️ Safety Tips</h3>
+    <p>Simple steps to help you prepare for emergencies.</p>
+
+    <ul id="safetyTipsList">
+        <li>Keep your phone charged.</li>
+        <li>Save trusted emergency contacts.</li>
+        <li>Stay aware of your surroundings.</li>
+        <li>Share your plans with someone you trust.</li>
+        <li>Contact local emergency services if you are in immediate danger.</li>
+    </ul>
+
+    <button type="button" onclick="showRandomTip()">Show Safety Tip</button>
+    <p id="randomTip"></p>
+
+    <hr>
+
+    <h3>⭐ Favourite Safety Tips</h3>
+    <p>Select a tip to save it for later.</p>
+
+    <select id="favouriteTipSelect">
+        <option value="">-- Choose a safety tip --</option>
+        <option value="Keep your phone charged.">Keep your phone charged.</option>
+        <option value="Save trusted emergency contacts.">Save trusted emergency contacts.</option>
+        <option value="Stay aware of your surroundings.">Stay aware of your surroundings.</option>
+        <option value="Share your plans with someone you trust.">Share your plans with someone you trust.</option>
+        <option value="Contact local emergency services if you are in immediate danger.">Contact local emergency services if you are in immediate danger.</option>
+    </select>
+
+    <button type="button" onclick="saveFavouriteTip()">⭐ Save Favourite</button>
+
+    <div id="favouriteTipsList"></div>
+</div>
+<div class="card" id="feedback">
+    <h3>💌 Share Your Feedback</h3>
+    <p>Help us improve SafeHer.</p>
+
+    <form id="feedbackForm">
+        <label for="feedbackName">Your Name</label>
+        <input type="text" id="feedbackName" placeholder="Enter your name" required>
+
+        <label for="feedbackEmail">Your Email</label>
+        <input type="email" id="feedbackEmail" placeholder="Enter your email" required>
+
+        <label for="feedbackMessage">Your Feedback</label>
+        <textarea id="feedbackMessage" rows="4" placeholder="Share your suggestions..." required></textarea>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+    <p id="feedbackStatus"></p>
+
+    <button type="button" onclick="viewSavedFeedback()">
+        📋 View Saved Feedback
+    </button>
+
+    <button type="button" onclick="exportFeedback()">
+        📥 Export Feedback
+    </button>
+
+    <div id="savedFeedbackList"></div>
+</div>
+</section>
+
+    </footer>
+
+   <script>
+function loadContacts() {
+    const savedContacts = JSON.parse(
+        localStorage.getItem("safeHerContacts") || "[]"
+    );
+
+    savedContacts.forEach(function (contact) {
+        displayContact(contact.name, contact.phone);
+    });
+}
+function displayContact(name, phone) {
+ 
+    const list = document.getElementById("contactList");
+    const item = document.createElement("li");
+
+    item.appendChild(
+        document.createTextNode(name + " - " + phone + " ")
+    );
+
+    const deleteButton = document.createElement("button");
+    const editButton = document.createElement("button");
+editButton.textContent = "Edit";
+
+editButton.onclick = function () {
+    const newName = prompt("Enter new contact name:", name);
+    if (newName === null) return;
+
+    const newPhone = prompt("Enter new phone number:", phone);
+    if (newPhone === null) return;
+
+    const updatedName = newName.trim();
+    const updatedPhone = newPhone.trim();
+
+    if (updatedName === "" || updatedPhone === "") {
+        alert("Name and phone number cannot be empty.");
+        return;
+    }
+const phonePattern = /^\+?[0-9]{10,15}$/;
+    
+    if (!phonePattern.test(updatedPhone)) {
+        alert("Enter a valid phone number (10-15 digits).");
+        return;
+    }
+
+    const savedContacts = JSON.parse(
+        localStorage.getItem("safeHerContacts") || "[]"
+    );
+
+    const duplicate = savedContacts.some(function (contact) {
+        return contact.phone === updatedPhone && contact.phone !== phone;
+    });
+
+    if (duplicate) {
+        alert("This phone number is already saved!");
+        return;
+    }
+
+    const updatedContacts = savedContacts.map(function (contact) {
+        if (contact.name === name && contact.phone === phone) {
+            return { name: updatedName, phone: updatedPhone };
+        }
+        return contact;
+    });
+localStorage.setItem
+    (
+        "safeHerContacts",
+        JSON.stringify(updatedContacts)
+    );
+
+    document.getElementById("contactList").innerHTML = "";
+    loadContacts();
+};
+        const callButton = document.createElement("button");
+    callButton.textContent = "📞 Call";
+    callButton.style.marginLeft = "8px";
+
+    callButton.onclick = function () {
+        const confirmCall = confirm(
+            "Call " + name + " at " + phone + "?"
+        );
+
+        if (confirmCall) {
+            window.location.href = "tel:" + phone;
+        }
+    };
+    deleteButton.textContent = "Delete";
+
+    deleteButton.onclick = async function () {
+
+    const confirmDelete = confirm(
+        "Are you sure you want to delete this contact?"
+    );
+
+    if (!confirmDelete) {
+        return;
+    }
+
+    try {
+        const response = await fetch(
+            "http://localhost:8080/api/contacts"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not fetch contacts.");
+        }
+
+        const backendContacts = await response.json();
+
+        const matchingContacts = backendContacts.filter(
+            function (contact) {
+                return contact.name === name &&
+                       contact.phone === phone;
+            }
+        );
+
+        for (const contact of matchingContacts) {
+            const deleteResponse = await fetch(
+                "http://localhost:8080/api/contacts/" + contact.id,
+                {
+                    method: "DELETE"
+                }
+            );
+
+            if (!deleteResponse.ok) {
+                throw new Error("Could not delete contact.");
+            }
+        }
+
+        const savedContacts = JSON.parse(
+            localStorage.getItem("safeHerContacts") || "[]"
+        );
+
+        const updatedContacts = savedContacts.filter(
+            function (contact) {
+                return !(contact.name === name &&
+                         contact.phone === phone);
+            }
+        );
+
+        localStorage.setItem(
+            "safeHerContacts",
+            JSON.stringify(updatedContacts)
+        );
+
+        document.getElementById("contactList").innerHTML = "";
+        loadContacts();
+
+        alert("Contact deleted successfully!");
+
+    } catch (error) {
+        alert("Unable to delete contact. Please check backend.");
+        console.error(error);
+    }
+};
+    item.appendChild(editButton);
+    item.appendChild(deleteButton);
+    item.appendChild(callButton);
+
+    list.appendChild(item);
+}
+
+async function addContact() {
+
+    const name = document.getElementById("contactName").value.trim();
+    const phone = document.getElementById("contactPhone").value.trim();
+
+    // Check name and phone
+    if (name === "" || phone === "") {
+        alert("Please enter both name and phone number.");
+        return;
+    }
+
+    // Validate phone number
+    const phonePattern = /^\+?[0-9]{10,15}$/;
+
+    if (!phonePattern.test(phone)) {
+        alert("Please enter a valid phone number (10-15 digits).");
+        return;
+    }
+
+    // Check duplicate contact
+    const savedContacts = JSON.parse(
+        localStorage.getItem("safeHerContacts") || "[]"
+    );
+
+    const duplicateContact = savedContacts.some(function(contact) {
+        return contact.phone === phone;
+    });
+
+    if (duplicateContact) {
+        alert("This phone number is already saved!");
+        return;
+    }
+
+    try {
+
+        // Send contact to Spring Boot backend
+        const response = await fetch("http://localhost:8080/api/contacts", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name: name,
+                phone: phone
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error("Contact could not be saved.");
+        }
+
+        const savedContact = await response.json();
+
+        // Save contact in browser storage too
+        savedContacts.push({
+            name: savedContact.name,
+            phone: savedContact.phone
+        });
+
+        localStorage.setItem(
+            "safeHerContacts",
+            JSON.stringify(savedContacts)
+        );
+
+        alert("Emergency contact saved successfully!");
+
+        displayContact(savedContact.name, savedContact.phone);
+
+        document.getElementById("contactName").value = "";
+        document.getElementById("contactPhone").value = "";
+
+    } catch (error) {
+
+        alert("Backend connection failed. Please check your server.");
+        console.error(error);
+
+    }
+}
+
+function saveEmergencyMessage() {
+    const message = document.getElementById("emergencyMessage").value;
+
+    localStorage.setItem("safeHerMessage", message);
+}
+
+function loadEmergencyMessage() {
+    const savedMessage = localStorage.getItem("safeHerMessage");
+
+    if (savedMessage !== null) {
+        document.getElementById("emergencyMessage").value = savedMessage;
+    }
+}
+
+document.getElementById("emergencyMessage").addEventListener("input", saveEmergencyMessage);
+loadEmergencyMessage();
+function copyEmergencyMessage() {
+    const message = document.getElementById("emergencyMessage").value.trim();
+
+    if (message === "") {
+        alert("Please write your message first.");
+        return;
+    }
+
+    navigator.clipboard.writeText(message)
+        .then(function () {
+            alert("Message copied! You can now share it.");
+        })
+        .catch(function () {
+            alert("Please select and copy your message manually.");
+        });
+}
+function shareOnWhatsApp() {
+    const message = document.getElementById("emergencyMessage").value.trim();
+
+    if (message === "") {
+        alert("Please write your emergency message first.");
+        return;
+    }
+
+    const whatsappURL =
+        "https://wa.me/?text=" + encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+}
+function showSOSMessage() {
+        alert(
+        "SOS demo activated. Please contact local emergency services or a trusted person if you need immediate help."
+    );
+}
+    let currentLocationLink = "";
+
+function getCurrentLocation() {
+
+    const result = document.getElementById("locationResult");
+
+    if (!navigator.geolocation) {
+        result.textContent = "Your browser does not support location sharing.";
+        return;
+    }
+
+    result.textContent = "Getting your location... Please wait.";
+
+    navigator.geolocation.getCurrentPosition(
+
+        function (position) {
+
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            currentLocationLink =
+                "https://www.google.com/maps?q=" +
+                latitude + "," + longitude;
+
+            result.innerHTML =
+                "Latitude: " + latitude +
+                "<br>Longitude: " + longitude +
+                "<br><a href='" + currentLocationLink +
+                "' target='_blank'>Open Location in Google Maps</a>";
+
+        },
+
+        function (error) {
+
+            if (error.code === 1) {
+                result.textContent = "Location permission denied. Please allow location access.";
+            } else {
+                result.textContent = "Unable to get your location. Please try again.";
+            }
+
+        }
+    );
+}
+function speakEmergencyMessage() {
+    const message = new SpeechSynthesisUtterance(
+        "Emergency! I may need help. Please contact me immediately."
+    );
+
+    message.lang = "en-IN";
+    message.rate = 0.9;
+
+    window.speechSynthesis.speak(message);
+}
+function startVoiceCommand() {
+    const result = document.getElementById("voiceCommandResult");
+
+    const SpeechRecognition =
+        window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    if (!SpeechRecognition) {
+        result.textContent =
+            "Voice recognition is not supported in this browser.";
+        return;
+    }
+
+    const recognition = new SpeechRecognition();
+recognition.lang = "hi-IN";
+    recognition.continuous = false;
+    recognition.interimResults = false;
+
+    result.textContent = "Listening... Please speak your command.";
+
+    recognition.onresult = function (event) {
+        const command = event.results[0][0].transcript.toLowerCase();
+        
+        result.textContent = "You said: " + command;
+const hindiCommand = command
+    .replace(/[.,!?।]/g, "")
+    .trim()
+    .toLowerCase();
+        result.textContent = "You said: " + command;
+console.log("Recognized command:", command);
+if (
+    command.includes("show safety tips") ||
+    command.includes("सुरक्षा टिप्स दिखाओ") ||
+    command.includes("सेफ्टी टिप्स दिखाओ") ||
+    command.includes("safety tips dikhao")
+) {
+    showSafetyTips();
+
+
+} else if (
+    command.includes("show contacts") ||
+    hindiCommand.includes("contact dikhao") ||
+    hindiCommand.includes("contacts dikhao")
+) {
+    showContacts();
+
+} else if (
+    command.includes("read emergency message") ||
+    hindiCommand.includes("emergency message padho")
+) {
+    speakEmergencyMessage();
+
+} else if (
+    command.includes("send sos") ||
+    hindiCommand.includes("sos shuru karo")
+) {
+    const confirmSOS = confirm(
+        "Do you want to start the 10-second emergency countdown?"
+    );
+
+    if (confirmSOS) {
+        startEmergencyCountdown();
+        result.textContent = "Emergency countdown started.";
+    } else {
+        result.textContent = "SOS cancelled.";
+    }
+
+} else if (
+    command.includes("call emergency contact") ||
+    hindiCommand.includes("emergency contact ko call karo")
+) {
+    callEmergencyContact();
+
+} else {
+    result.textContent =
+        "Command not recognized. Please try again.";
+}
+        
+    };
+
+    recognition.onerror = function () {
+        result.textContent =
+            "Could not recognize your voice. Please check microphone permission.";
+    };
+
+    recognition.start();
+}
+function shareLocationOnWhatsApp() {
+
+    if (currentLocationLink === "") {
+        alert("Please get your current location first!");
+        return;
+    }
+
+    const message =
+        "My current location is: " + currentLocationLink;
+
+    const whatsappURL =
+        "https://wa.me/?text=" + encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+}
+  function shareLocationWithContact() {
+
+    const savedContacts = JSON.parse(
+        localStorage.getItem("safeHerContacts") || "[]"
+    );
+
+    if (savedContacts.length === 0) {
+        alert("Please add an emergency contact first.");
+        return;
+    }
+
+    if (currentLocationLink === "") {
+        alert("Please get your current location first!");
+        return;
+    }
+
+    const contact = savedContacts[0];
+
+    const message =
+        "Hello " + contact.name +
+        ", I need help. This is my current location: " +
+        currentLocationLink;
+
+    const whatsappURL =
+        "https://wa.me/" +
+        contact.phone.replace(/\D/g, "") +
+        "?text=" + encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+}
+let countdownWhatsAppURL = "";
+let countdownTimer;
+let countdownTime = 10;
+
+function startEmergencyCountdown() {
+
+    clearInterval(countdownTimer);
+
+    countdownTime = 10;
+
+    const display = document.getElementById("countdownDisplay");
+    const message = document.getElementById("countdownMessage");
+
+    display.textContent = countdownTime;
+    message.textContent = "Emergency countdown started!";
+
+    countdownTimer = setInterval(function () {
+
+        countdownTime--;
+
+        display.textContent = countdownTime;
+
+        if (countdownTime === 0) {
+
+            clearInterval(countdownTimer);
+
+            message.textContent =
+                "Countdown completed! You can now share your emergency message.";
+
+            const savedContacts = JSON.parse(
+                localStorage.getItem("safeHerContacts") || "[]"
+            );
+
+           if (savedContacts.length > 0) {
+    const contact = savedContacts[0];
+
+    const emergencyText =
+        "I may need help. Please contact me. My location: " +
+        (currentLocationLink || "Location not available");
+
+    countdownWhatsAppURL =
+        "https://wa.me/" +
+        contact.phone.replace(/\D/g, "") +
+        "?text=" + encodeURIComponent(emergencyText);
+
+    document.getElementById("openCountdownWhatsApp").style.display =
+        "inline-block";
+
+} else {
+    alert("Please add an emergency contact first.");
+}
+        }
+
+    }, 1000);
+}
+function openCountdownWhatsApp() {
+    if (countdownWhatsAppURL === "") {
+        alert("Please complete the countdown first.");
+        return;
+    }
+
+    window.open(countdownWhatsAppURL, "_blank");
+}
+function cancelEmergencyCountdown() {
+
+    clearInterval(countdownTimer);
+
+    countdownTime = 10;
+
+    document.getElementById("countdownDisplay").textContent = "10";
+
+    document.getElementById("countdownMessage").textContent =
+        "Countdown cancelled.";
+}
+function callEmergencyContact() {
+    const savedContacts = JSON.parse(
+        localStorage.getItem("safeHerContacts") || "[]"
+    );
+
+    if (savedContacts.length === 0) {
+        alert("Please add an emergency contact first.");
+        return;
+    }
+
+    const contact = savedContacts[0];
+
+    const confirmCall = confirm(
+        "Call " + contact.name + " at " + contact.phone + "?"
+    );
+
+    if (confirmCall) {
+        window.location.href = "tel:" + contact.phone;
+    }
+}
+
+loadContacts();
+loadEmergencyMessage();
+function showRandomTip() {
+    const tips = [
+        "Keep your phone charged before travelling.",
+        "Save trusted emergency contacts on your phone.",
+        "Share your travel plans with someone you trust.",
+        "Stay aware of your surroundings.",
+        "If you feel unsafe, move towards a safer public place."
+    ];
+
+    const randomIndex = Math.floor(Math.random() * tips.length);
+
+    document.getElementById("randomTip").textContent =
+        tips[randomIndex];
+}
+function showSafetyTips() {
+    const safetyTips = document.getElementById("safetyTipsList");
+
+    if (safetyTips) {
+        safetyTips.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+        safetyTips.style.display = "block";
+    }
+}
+function clearEmergencyMessage() {
+    const confirmClear = confirm(
+        "Are you sure you want to clear your emergency message?"
+    );
+
+    if (confirmClear) {
+        document.getElementById("emergencyMessage").value = "";
+        localStorage.removeItem("safeHerMessage");
+    }
+}
+function useEmergencyTemplate() {
+    const message =
+        "I need help. My current location is: [Enter your location]. Please contact me as soon as possible.";
+
+    document.getElementById("emergencyMessage").value = message;
+
+    saveEmergencyMessage();
+}
+
+function callHelpline() {
+    const confirmCall = confirm(
+        "Do you want to call India's emergency helpline 112?"
+    );
+
+    if (confirmCall) {
+        window.location.href = "tel:112";
+    }
+}
+
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+
+    const isDarkMode = document.body.classList.contains("dark-mode");
+
+    localStorage.setItem("safeHerDarkMode", isDarkMode);
+}
+
+function loadDarkMode() {
+    const savedMode = localStorage.getItem("safeHerDarkMode");
+
+    if (savedMode === "true") {
+        document.body.classList.add("dark-mode");
+    }
+}
+loadDarkMode();
+
+function exportContacts() {
+    const savedContacts = JSON.parse(
+        localStorage.getItem("safeHerContacts") || "[]"
+    );
+
+    if (savedContacts.length === 0) {
+        alert("No emergency contacts to export. Please add a contact first.");
+        return;
+    }
+
+    let content = "SafeHer Emergency Contacts\n\n";
+
+    savedContacts.forEach(function (contact, index) {
+        content += (index + 1) + ". Name: " + contact.name +
+            "\n   Phone: " + contact.phone + "\n\n";
+    });
+
+    const file = new Blob([content], {
+        type: "text/plain"
+    });
+
+    const downloadLink = document.createElement("a");
+    downloadLink.href = URL.createObjectURL(file);
+    downloadLink.download = "SafeHer-Emergency-Contacts.txt";
+
+    downloadLink.click();
+
+    URL.revokeObjectURL(downloadLink.href);
+}
+
+document.getElementById("feedbackForm").addEventListener("submit", function (event) {
+        alert("Feedback form event started!");
+    event.preventDefault();
+
+    const name = document.getElementById("feedbackName").value.trim();
+    const email = document.getElementById("feedbackEmail").value.trim();
+    const message = document.getElementById("feedbackMessage").value.trim();
+
+    if (name === "" || email === "" || message === "") {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    const feedback = {
+        name: name,
+        email: email,
+        message: message,
+        date: new Date().toLocaleString()
+    };
+
+    const savedFeedback = JSON.parse(
+        localStorage.getItem("safeHerFeedback") || "[]"
+    );
+
+    savedFeedback.push(feedback);
+
+    localStorage.setItem(
+        "safeHerFeedback",
+        JSON.stringify(savedFeedback)
+    );
+
+    document.getElementById("feedbackStatus").textContent =
+        "Thank you! Your feedback has been saved on this device.";
+
+    document.getElementById("feedbackForm").reset();
+});
+
+function viewSavedFeedback() {
+    const savedFeedback = JSON.parse(
+        localStorage.getItem("safeHerFeedback") || "[]"
+    );
+
+    const feedbackList = document.getElementById("savedFeedbackList");
+    feedbackList.innerHTML = "";
+
+    if (savedFeedback.length === 0) {
+        feedbackList.textContent = "No feedback saved yet.";
+        return;
+    }
+
+    savedFeedback.forEach(function (feedback, index) {
+        const card = document.createElement("div");
+        card.style.border = "1px solid #ccc";
+        card.style.padding = "12px";
+        card.style.margin = "10px 0";
+        card.style.borderRadius = "8px";
+
+        const heading = document.createElement("h3");
+        heading.textContent = "Feedback " + (index + 1);
+
+        const name = document.createElement("p");
+        name.textContent = "Name: " + feedback.name;
+
+        const message = document.createElement("p");
+        message.textContent = "Feedback: " + feedback.message;
+
+        const date = document.createElement("p");
+        date.textContent = "Date: " + feedback.date;
+
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete Feedback";
+        deleteButton.type = "button";
+
+        deleteButton.onclick = function () {
+            if (confirm("Are you sure you want to delete this feedback?")) {
+                const updatedFeedback = savedFeedback.filter(
+                    function (item, i) {
+                        return i !== index;
+                    }
+                );
+
+                localStorage.setItem(
+                    "safeHerFeedback",
+                    JSON.stringify(updatedFeedback)
+                );
+
+                viewSavedFeedback();
+            }
+        };
+
+        card.appendChild(heading);
+        card.appendChild(name);
+        card.appendChild(message);
+        card.appendChild(date);
+        card.appendChild(deleteButton);
+
+        feedbackList.appendChild(card);
+    });
+}
+
+function exportFeedback() {
+    const savedFeedback = JSON.parse(
+        localStorage.getItem("safeHerFeedback") || "[]"
+    );
+
+    if (savedFeedback.length === 0) {
+        alert("No feedback available to export!");
+        return;
+    }
+
+    let content = "SafeHer - Saved Feedback\n";
+    content += "=========================\n\n";
+
+    savedFeedback.forEach(function (feedback, index) {
+        content += "Feedback " + (index + 1) + "\n";
+        content += "Name: " + feedback.name + "\n";
+        content += "Email: " + feedback.email + "\n";
+        content += "Message: " + feedback.message + "\n";
+        content += "Date: " + feedback.date + "\n";
+        content += "-------------------------\n\n";
+    });
+
+    const file = new Blob([content], {
+        type: "text/plain;charset=utf-8"
+    });
+
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(file);
+    link.download = "SafeHer-Feedback.txt";
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    URL.revokeObjectURL(link.href);
+
+    alert("Feedback exported successfully!");
+}
+function saveFavouriteTip() {
+    const select = document.getElementById("favouriteTipSelect");
+    const tip = select.value;
+
+    if (tip === "") {
+        alert("Please select a safety tip first!");
+        return;
+    }
+
+    const favourites = JSON.parse(
+        localStorage.getItem("safeHerFavouriteTips") || "[]"
+    );
+
+    if (favourites.includes(tip)) {
+        alert("This tip is already in your favourites!");
+        return;
+    }
+
+    favourites.push(tip);
+
+    localStorage.setItem(
+        "safeHerFavouriteTips",
+        JSON.stringify(favourites)
+    );
+
+    select.value = "";
+
+    displayFavouriteTips();
+
+    alert("Safety tip added to favourites!");
+}
+
+function displayFavouriteTips() {
+    const favourites = JSON.parse(
+        localStorage.getItem("safeHerFavouriteTips") || "[]"
+    );
+
+    const list = document.getElementById("favouriteTipsList");
+    list.innerHTML = "";
+
+    if (favourites.length === 0) {
+        list.textContent = "No favourite tips saved yet.";
+        return;
+    }
+
+    favourites.forEach(function (tip, index) {
+        const item = document.createElement("div");
+        item.style.border = "1px solid #ccc";
+        item.style.padding = "10px";
+        item.style.margin = "8px 0";
+        item.style.borderRadius = "8px";
+
+        const text = document.createElement("p");
+        text.textContent = "⭐ " + tip;
+
+        const deleteButton = document.createElement("button");
+        deleteButton.type = "button";
+        deleteButton.textContent = "Remove Favourite";
+
+        deleteButton.onclick = function () {
+            const updatedFavourites = favourites.filter(
+                function (savedTip, i) {
+                    return i !== index;
+                }
+            );
+
+            localStorage.setItem(
+                "safeHerFavouriteTips",
+                JSON.stringify(updatedFavourites)
+            );
+
+            displayFavouriteTips();
+        };
+
+        item.appendChild(text);
+        item.appendChild(deleteButton);
+        list.appendChild(item);
+    });
+}
+
+displayFavouriteTips();
+
+
+</script>
+
+</body>
+</html>
